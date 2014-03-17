@@ -9,7 +9,6 @@ class SessionsController < ApplicationController
       sign_in user
       redirect_to home
     else
-      binding.pry
       flash[:error] = 'Invalid email/password combination'
       render 'new'
     end
